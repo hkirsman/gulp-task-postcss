@@ -101,7 +101,7 @@ module.exports = function (gulp, gulpConfig) {
       }))
       .pipe(postcssImportStream)
       .pipe(postcssStream)
-      .pipe(gulpif(config.sourcemaps, sourcemaps.write()))
+      .pipe(gulpif(config.sourcemaps, sourcemaps.write('.')))
       .pipe(rename(function (path) {
         // Remove ".p" from filename if exists.
         var remove = '.p';
